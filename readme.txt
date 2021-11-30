@@ -1,6 +1,6 @@
 %%%%%% Paper citation information %%%%%%
 Single-differenced Model for GNSS-A Point Positioning
-
+ DRD Algorithm
 %%%%%% Basic probblem with mutli nusaince parameters to be solved  %%%%%%
 %The original observation model:
 L = Ax + e
