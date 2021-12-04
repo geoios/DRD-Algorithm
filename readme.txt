@@ -1,3 +1,5 @@
+Background
+============
 %%%%%% Paper citation information %%%%%%
 Single-differenced Model for GNSS-A Point Positioning
 In this paper, a dimension-reduction algorithm called DRD Algorithm for short is developed to fast figure out the differenced solution
