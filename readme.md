@@ -95,4 +95,17 @@ where pi are the weights of the observations. The conversion formula between the
 
 Dimension-reduction algorithm based on the conversion formula
 ====================
-The conversion formula can be generalized 
+We can develop a very efficient algorithm solving the model with nusiance parameters based on the conversion formulae. The code files are listed as follows: 
+
+Example code 1 (Fixed the number of observations)
+--> Main_Example1
+Example code 2 (Fixed the number of nuisance parameters)
+--> Main_Example2
+
+Dimension-reduction algorithms
+--> FastDiffSolEW      ...(Dimension-reduction algorithm for equal-weight observations)
+--> FastDiffSol2UEW    ...(Dimension-reduction algorithm for unequal-weight observations)
+
+Blocking-stacking algorithms
+--> RapidDiffSolEW      ...(Blocking-stacking algorithm for equal-weight observations)
+--> UnDiffSolSim        ...(Blocking-stacking algorithm for unequal-weight observations)
