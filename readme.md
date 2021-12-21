@@ -74,3 +74,4 @@ where
 
 ![LS solution of main parameter](https://latex.codecogs.com/svg.image?k_2=\sum_{i=1}^{n}V_i_o)
 
+![LS solution of main parameter](https://latex.codecogs.com/svg.image?\bar{a}=\begin{pmatrix}\sum_{i=1}^{n}a_i_1&\sum_{i=1}^{n}a_i_2&...&\sum_{i=1}^{n}a_i_{m-1}\\\\\end{pmatrix})
