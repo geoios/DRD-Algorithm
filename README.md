@@ -1,5 +1,5 @@
 Model 1 and solution 1: Basic observational model only with main parameter x reads
-====================
+=====================
 
 ![model without nusaince parameter](https://latex.codecogs.com/svg.image?L\text{=}A{{X}_{1}}+e_L)
 
@@ -7,7 +7,7 @@ where e is the obervational error term. The least squares (LS) estimation of the
 
 ![LS solution of main parameter](https://latex.codecogs.com/svg.image?\hat{X}_o=({A^TP_{e_L}A})^{-1}A^TP_{e_L}L)
 
-where P is the weight matrix of the observationsï¼Œ
+where P is the weight matrix of the observationsï¼?
 
 ![LS solution of main parameter](https://latex.codecogs.com/svg.image?Q_{\hat{X}_o}=(A^TA)^{-1})
 
