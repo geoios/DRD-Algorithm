@@ -87,6 +87,8 @@ The above formula can be generalized to the unequal weight case, that
 ![LS solution of main parameter](https://latex.codecogs.com/svg.image?\bar{a}=\begin{pmatrix}\sum_{i=1}^{n}p_ia_i_1&\sum_{i=1}^{n}p_ia_i_2&...&\sum_{i=1}^{n}p_ia_i_{(m-1)}\\\\\end{pmatrix})
 
 where pi are the weights of the observations. The conversion formula between the variance estimations can also be established.
+
+--------------------------
   The conversion formula can be generalized from one nusiance parameter to multi nusiance parameters of the following form
   
 ![LS solution of main parameter](https://latex.codecogs.com/svg.image?\begin{pmatrix}L_1\\\\L_2\\\\...\\\\L_q\end{pmatrix}=\begin{pmatrix}A_1&Z_1&0&...&0\\\\A_2&0&Z_2&...&0\\\\...&...&...&...&...\\\\A_q&0&0&...&Z_q\\\\\end{pmatrix}\begin{pmatrix}X\\\\\Delta_1\\\\...\\\\\Delta_q\end{pmatrix}+\begin{pmatrix}e_1\\\\e_2\\\\...\\\\e_q\end{pmatrix})
