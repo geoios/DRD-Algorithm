@@ -29,6 +29,31 @@ where J is the reweighting matrix and it reads:
 
 Solution 2: Differenced solution
 ====================
-For the differencing operator K satisfing 
+For the differencing operator K that satisfies
 
 ![LS solution of main parameter](https://latex.codecogs.com/svg.image?K^TZ=0)
+
+left multiplying the differencing operator K to both sides of the model 2 will result in
+
+![LS solution of main parameter](https://latex.codecogs.com/svg.image?\Delta_L=K^TL=K^TAX+K^Te_L)
+
+With regard to the correlation between the differenced observations, i.e., the co-factor matrix of ΔL
+
+![LS solution of main parameter](https://latex.codecogs.com/svg.image?K^TP_{e_L}^{-1}K)
+
+then the differenced solution reads
+
+![LS solution of main parameter](https://latex.codecogs.com/svg.image?\hat{X}_d=(A^T\widehat{P}_{e_L}A)^{-1}A\widehat{P}_{e_L}L)
+
+where
+
+![LS solution of main parameter](https://latex.codecogs.com/svg.image?\widehat{P}_{e_L}=K(K^TP_{e_L}^{-1}K)^{-1}K^T)
+
+is called as differencing equivalence weight (DEW) matrix which also means to reweighting the observations like the solution 1. 
+
+Equivalence between the solution 1 and solution 2
+====================
+Let n is the number of observations, if rank(k) = n - l, the solution 1 is equivalent to the solution 2 becuase of the following equality
+
+![LS solution of main parameter](https://latex.codecogs.com/svg.image?J=\widehat{P}_{e_L})
+
