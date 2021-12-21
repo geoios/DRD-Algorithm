@@ -9,11 +9,11 @@ where e is the obervational error term. The least squares (LS) estimation of the
 
 where P is the weight matrix of the observations，
 
-![LS solution of main parameter](https://latex.codecogs.com/svg.image?Q_{\hat{X}_o}=(A_TA)^{-1})
+![LS solution of main parameter](https://latex.codecogs.com/svg.image?Q_{\hat{X}_o}=(A^TA)^{-1})
 
 is the co-factor matrix of the main parameters.
 
-Model 2: Observational model augmented with nuisance parameters Δ reads
+Model 2: Observational model augmented with one nuisance parameter Δ reads
 ====================
 ![model without nusaince parameter](https://latex.codecogs.com/svg.image?L\text{=}A{{X}_{2}}+Z\Delta+e_L)
 
@@ -62,9 +62,9 @@ Let n is the number of observations, if rank(K)=n-l, the solution 1 is equivalen
 ![LS solution of main parameter](https://latex.codecogs.com/svg.image?J=\widehat{P}_{e_L})
 
 
-Conversion between the solution 2-1 or 2-2 and solution 1  (equal-weight case)
+Conversion formula between the solution 2-1 or 2-2 and solution 1
 ====================
-We can establish the following conversion formula between the solution 2-2 and soution 1
+In equal-weight case, we can establish the following conversion formula between the solution 2-2 and soution 1
 
 ![LS solution of main parameter](https://latex.codecogs.com/svg.image?\hat{X}_d=\hat{X}_o-k_1k_2Q_{\hat{X}_o}\bar{a}^T)
 
@@ -74,4 +74,23 @@ where
 
 ![LS solution of main parameter](https://latex.codecogs.com/svg.image?k_2=\sum_{i=1}^{n}V_i_o)
 
-![LS solution of main parameter](https://latex.codecogs.com/svg.image?\bar{a}=\begin{pmatrix}\sum_{i=1}^{n}a_i_1&\sum_{i=1}^{n}a_i_2&...&\sum_{i=1}^{n}a_i_{m-1}\\\\\end{pmatrix})
+![LS solution of main parameter](https://latex.codecogs.com/svg.image?\bar{a}=\begin{pmatrix}\sum_{i=1}^{n}a_i_1&\sum_{i=1}^{n}a_i_2&...&\sum_{i=1}^{n}a_i_{(m-1)}\\\\\end{pmatrix})
+
+where ![L](https://latex.codecogs.com/svg.image?a_i_j) is the entry of the matrix A.
+
+The above formula can be generalized to the unequal weight case, that
+
+![LS solution of main parameter](https://latex.codecogs.com/svg.image?k_1=(\sum_{i=1}^{n}p_i\bar{a}Q_{\hat{X}_o}\bar{a}^T)^{-1})
+
+![LS solution of main parameter](https://latex.codecogs.com/svg.image?k_2=\sum_{i=1}^{n}p_iV_i_o)
+
+![LS solution of main parameter](https://latex.codecogs.com/svg.image?\bar{a}=\begin{pmatrix}\sum_{i=1}^{n}p_ia_i_1&\sum_{i=1}^{n}p_ia_i_2&...&\sum_{i=1}^{n}p_ia_i_{(m-1)}\\\\\end{pmatrix})
+
+where pi are the weights of the observations. The conversion formula between the variance estimations can also be established.
+  The conversion formula can be generalized from one nusiance parameter to multi nusiance parameters of the following form
+  
+![LS solution of main parameter](https://latex.codecogs.com/svg.image?\begin{pmatrix}L_1\\\\L_2\\\\...\\\\L_q\end{pmatrix}=\begin{pmatrix}A_1&Z_1&0&...&0\\\\A_2&0&Z_2&...&0\\\\...&...&...&...&...\\\\A_q&0&0&...&Z_q\\\\\end{pmatrix}\begin{pmatrix}X\\\\\Delta_1\\\\...\\\\\Delta_q\end{pmatrix}+\begin{pmatrix}e_1\\\\e_2\\\\...\\\\e_q\end{pmatrix})
+
+Dimension-reduction algorithm based on the conversion formula
+====================
+The conversion formula can be generalized 
