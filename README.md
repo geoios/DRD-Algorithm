@@ -1,4 +1,4 @@
-Model 1 and solution 1: Basic observational model only with main parameter X
+Model 1 and solution 1: Basic observational model only with main parameter
 ====================
 
 ![model without nusaince parameter](https://latex.codecogs.com/svg.image?L\text{=}A{{X}_{1}}+e_L)
@@ -13,7 +13,7 @@ where P is the weight matrix of the observations.?
 
 is the co-factor matrix of the main parameters.
 
-Model 2: Observational model augmented with one nuisance parameter ¶§
+Model 2: Observational model augmented with one nuisance parameter
 ====================
 ![model without nusaince parameter](https://latex.codecogs.com/svg.image?L\text{=}A{{X}_{2}}+Z\Delta+e_L)
 
@@ -41,7 +41,7 @@ left multiplying the differencing operator K to both sides of the model 2 will r
 
 ![LS solution of main parameter](https://latex.codecogs.com/svg.image?\Delta_L=K^TL=K^TAX+K^Te_L)
 
-With regard to the correlation between the differenced observations, i.e., the co-factor matrix of ŒîL
+With regard to the correlation between the differenced observations, i.e., the co-factor matrix of √é‚ÄùL
 
 ![LS solution of main parameter](https://latex.codecogs.com/svg.image?K^TP_{e_L}^{-1}K)
 
