@@ -109,9 +109,13 @@ We can develop a very efficient algorithm solving the model with nusiance parame
 
 >> Function: Dimension-reduction algorithm for equal-weight observations
 
+   This program uses the dimension-reduction algorithm to solve the solution of model 1 with the equal weight.
+
 * FastDiffSol2UEW.m
 
 >> Function: Dimension-reduction algorithm for unequal-weight observations
+
+   This program uses the dimension-reduction algorithm to solve the solution of model 1 with the unequal weight.
 
 ## Blocking-stacking algorithms
 
@@ -119,12 +123,17 @@ We can develop a very efficient algorithm solving the model with nusiance parame
 
 >> Function: Blocking-stacking algorithm for equal-weight observations
 
+   This program uses the block-wise sequential least squares method to solve the solution of model 1 with the equal weight.
+
 * UnDiffSolSim
  
 >> Function: Blocking-stacking algorithm for unequal-weight observations
 
+   This program uses the block-wise sequential least squares method to solve the solution of model 1 with the unequal weight.
+
 
 ## Example code 1 (Fixed the number of observations)
+To illustrate the running speed of the algorithm, we fix the number of the observation parameter, n=100, and the number q of nuisance parameters gradually increases from 1 to 50 to test the proposed algorithm performance.
 
 <p align="center"><img src = 'https://github.com/geoios/DRD-Algorithm/blob/main_ywl/Fixed%20observations_EqualWeight.jpg' width="700"></b>
 
@@ -135,3 +144,17 @@ We can develop a very efficient algorithm solving the model with nusiance parame
 <b><p align="center" fontsize="15">(b) unequal-weight case</p></b>
 
 ### Example code 2 (Fixed the number of nuisance parameters)
+To test that the running time increases with the number of observations, we fix the dimension of the nuisance parameter, q=20, and then increase the number of each set of observations from 20 to 200.
+
+<p align="center"><img src = 'https://github.com/geoios/DRD-Algorithm/blob/main_ywl/Fixed%20nuisance%20%20parameter_EqualWeight.jpg' width="700"></b>
+
+<b><p align="center" fontsize="15">(a) equal-weight case</p></b>
+
+<p align="center"><img src = 'https://github.com/geoios/DRD-Algorithm/blob/main_ywl/Fixed%20nuisance%20%20parameter_UnequalWeight.jpg' width="700"></b>
+
+<b><p align="center" fontsize="15">(b) unequal-weight case</p></b>
+
+
+
+
+
