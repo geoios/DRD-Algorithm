@@ -111,7 +111,7 @@ We can develop a very efficient algorithm solving the model with nusiance parame
 
 * FastDiffSol2UEW.m
 
->> Function: Dimension-reduction algorithm for unequal-weight observations)
+>> Function: Dimension-reduction algorithm for unequal-weight observations
 
 ## Blocking-stacking algorithms
 
@@ -126,8 +126,12 @@ We can develop a very efficient algorithm solving the model with nusiance parame
 
 ## Example code 1 (Fixed the number of observations)
 
-<p align="center"><img src = 'https://github.com/geoios/DRD-Algorithm/blob/main_ywl/Fixed%20nuisance%20%20parameter_EqualWeight.jpg' width="700"></b>
+<p align="center"><img src = 'https://github.com/geoios/DRD-Algorithm/blob/main_ywl/Fixed%20observations_EqualWeight.jpg' width="700"></b>
 
-<b><p align="center" fontsize="15">???</p></b>
+<b><p align="center" fontsize="15">(a) equal-weight case</p></b>
+
+<p align="center"><img src = 'https://github.com/geoios/DRD-Algorithm/blob/main_ywl/Fixed%20observations_UnequalWeight.jpg' width="700"></b>
+
+<b><p align="center" fontsize="15">(b) unequal-weight case</p></b>
 
 ### Example code 2 (Fixed the number of nuisance parameters)
