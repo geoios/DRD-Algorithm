@@ -111,6 +111,7 @@ Dimension-reduction algorithms
 -------------------------------
 
 --> FastDiffSolEW      ...(Dimension-reduction algorithm for equal-weight observations)
+![image](https://github.com/geoios/DRD-Algorithm/blob/main_ywl/Fixed%20nuisance%20%20parameter_EqualWeight.jpg)
 
 --> FastDiffSol2UEW    ...(Dimension-reduction algorithm for unequal-weight observations)
 
