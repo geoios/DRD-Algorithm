@@ -140,7 +140,7 @@ We can develop a very efficient algorithm solving the model with nusiance parame
 
 <b><p align="center" fontsize="15">(b) unequal-weight case</p></b>
 
-<b><p align="center" fontsize="15">Runing time </p></b>
+<b><p align="center" fontsize="15">Runing time comparsion</p></b>
 
 ### Example code 2 (Fixed the number of nuisance parameters)
 >> To illustrate the running speed of the algorithm, fix the nuisance paramter number q=20, and increase the observation number from 20 to 200, then the runing times of different algorithms are shown in the following figures.
@@ -152,3 +152,5 @@ We can develop a very efficient algorithm solving the model with nusiance parame
 <p align="center"><img src = 'https://github.com/geoios/DRD-Algorithm/blob/main_ywl/Fixed%20nuisance%20%20parameter_UnequalWeight.jpg' width="700"></b>
 
 <b><p align="center" fontsize="15">(b) unequal-weight case</p></b>
+
+<b><p align="center" fontsize="15">Runing time comparsion</p></b>
