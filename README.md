@@ -63,10 +63,11 @@ is called as differencing equivalence weight (DEW) matrix which also means to re
 
 ## Equivalence between the solution 2-1 and solution 2-2
 
-Let n is the number of observations, if rank(K)=n-l, the solution 1 is equivalent to the solution 2 becuase of the following equality
+Let n is the number of observations, if rank(K)=n-1 and [K Z] is full of column rank, the solution 1 is equivalent to the solution 2 becuase of the following equality
 
-![LS solution of main parameter](https://latex.codecogs.com/svg.image?J=\widehat{P}_{e_L})
+![L](https://latex.codecogs.com/svg.image?J=\widehat{P}_{e_L})
 
+always holds.  
 
 # Conversion formula between the solution 2-1 or 2-2 and solution 1
 
