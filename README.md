@@ -47,7 +47,7 @@ left multiplying the differencing operator K to both sides of the model 2 will r
 
 ![LS solution of main parameter](https://latex.codecogs.com/svg.image?\Delta_L=K^TL=K^TAX+K^Te_L)
 
-With regard to the correlation between the differenced observations, i.e., the co-factor matrix of Î”L
+With regard to the correlation between the differenced observations, i.e., the co-factor matrix of differenced observations
 
 ![LS solution of main parameter](https://latex.codecogs.com/svg.image?K^TP_{e_L}^{-1}K)
 
