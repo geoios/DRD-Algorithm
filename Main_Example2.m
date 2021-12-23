@@ -1,7 +1,7 @@
 %{
         This is an example to show how to use the dimension-reduction algorithm function.
         At the same time, the computational efficiency of blocking-stacking algorithm  and
-        dimension-reduction algorithm is compared.
+        dimension-reduction algorithm are compared.
 
         At first, assume that the number q of nuisance parameters is fixed to be  q = 20, and the number 
         of each set of observations gradually increase from 20 to 200 to test the proposed 
@@ -11,13 +11,13 @@
 clc; clear all; close all;
 
 m      = 3;    % Number of main parameters
-q      = 20;   % Number of nuisance parameters 
+q      = 50;   % Number of nuisance parameters 
 Loop   = 0;    % Recording the iteration times
 
-for ObsNum = 20:200  % q is the number of each set of observations
+for ObsNum = 100:1000  % q is the number of each set of observations
     
     Loop = Loop + 1; 
-    ks   = ones(1,q) * ObsNum * q ;                    % Numbers of block observations
+    ks   = ones(1,q) * ObsNum;                    % Numbers of block observations
 
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     %        +++++++++++ test data simulation  +++++++++++            %

@@ -1,7 +1,7 @@
 %{
         This is an example to show how to use the dimension-reduction algorithm function.
         At the same time, the computational efficiency of blocking-stacking algorithm  and
-        dimension-reduction algorithm is compared.
+        dimension-reduction algorithm are compared.
 
         In the presented example, the number of each set of observations is intially set as ObsNum = 30,
         and the number q of nuisance parameters gradually increase from 1
@@ -11,11 +11,11 @@
 clc; clear all; close all;
 
 m      = 3;   % Number of parameter estimates
-ObsNum = 30;  % Number of observations
+ObsNum = 1000;  % Number of observations
 
-for q = 1:100  % q is the number of nuisance parameters
+for q = 1:50  % q is the number of nuisance parameters
     
-    ks = ones(1,q) * ObsNum * q ;                      % Number of Block observations
+    ks = ones(1,q) * ObsNum;                      % Number of Block observations
 
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     %        +++++++++++ test data simulation  +++++++++++            %
@@ -62,7 +62,7 @@ for q = 1:100  % q is the number of nuisance parameters
 end
 
 % Drawing results (Equal-weight case)
-FigOutput(RunTime_Case1(:,1) ,RunTime_Case1(:,2))
+FigOutput(RunTime_Case1(:,1), RunTime_Case1(:,2))
 title({'Running time increasing with the number of nuisance parameters(Euqal-weight)'});
 
 % Drawing results( Unequal-weight case)
