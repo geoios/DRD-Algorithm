@@ -63,7 +63,7 @@ is called as differencing equivalence weight (DEW) matrix which also means to re
 
 ## Equivalence between the solution 2-1 and solution 2-2
 
-Let n is the number of observations, if rank(K)=n-1 and [K Z] is full of column rank, the solution 1 is equivalent to the solution 2 becuase the following equality
+Let n is the number of observations, if rank(K)=n-1 and [K Z] is full of column rank, the solution 1 is equivalent to the solution 2 because the following equality
 
 ![L](https://latex.codecogs.com/svg.image?J=\widehat{P}_{e_L})
 
