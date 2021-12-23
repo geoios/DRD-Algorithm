@@ -94,10 +94,15 @@ The above formula can be generalized to the unequal weight case, that
 
 where pi are the weights of the observations. The conversion formula between the variance estimations can also be established.
 
---------------------------
-  The conversion formula can be generalized from one nusiance parameter to multi nusiance parameters of the following form
-  
+# Observational model augmented with one or more nuisance parameters
+
+## Model 3
+
+>> The model 2 can be generalized to the following case with multi nuisance parameters:
+
 <img src="https://latex.codecogs.com/svg.image?\begin{pmatrix}L_1\\\\L_2\\\\...\\\\L_q\end{pmatrix}=\begin{pmatrix}A_1&Z_1&0&...&0\\\\A_2&0&Z_2&...&0\\\\...&...&...&...&...\\\\A_q&0&0&...&Z_q\\\\\end{pmatrix}\begin{pmatrix}X\\\\\Delta_1\\\\...\\\\\Delta_q\end{pmatrix}+\begin{pmatrix}e_1\\\\e_2\\\\...\\\\e_q\end{pmatrix}">
+  
+>> The conversion formula can be generalized from one nusiance parameter to multi nusiance parameters of the above form.
 
 # Dimension-reduction algorithm based on the conversion formula
 
@@ -109,13 +114,13 @@ We can develop a very efficient algorithm solving the model with nusiance parame
 
 >> Function: Dimension-reduction algorithm for equal-weight observations
 
-   This program uses the dimension-reduction algorithm to solve the solution of model 1 with the equal weight.
+   This program uses the dimension-reduction algorithm to solve the solution of Model 3 with the equal weight.
 
 * FastDiffSol2UEW.m
 
 >> Function: Dimension-reduction algorithm for unequal-weight observations
 
-   This program uses the dimension-reduction algorithm to solve the solution of model 1 with the unequal weight
+   This program uses the dimension-reduction algorithm to solve the solution of Model 3 with the unequal weight
 
 ## Blocking-stacking algorithms
 
@@ -123,13 +128,13 @@ We can develop a very efficient algorithm solving the model with nusiance parame
 
 >> Function: Blocking-stacking algorithm for equal-weight observations
 
-   This program uses the block-wise sequential least squares method to solve the solution of model 1 with the equal weight.
+   This program uses the block-wise sequential least squares method to solve the solution of Model 3 with the equal weight.
 
 * UnDiffSolSim
  
 >> Function: Blocking-stacking algorithm for unequal-weight observations
 
-   This program uses the block-wise sequential least squares method to solve the solution of model 1 with the unequal weight.
+   This program uses the block-wise sequential least squares method to solve the solution of Model 3 with the unequal weight.
 
 
 ## Example code 1 (Fixed the number of observations)
@@ -153,8 +158,3 @@ To test that the running time increases with the number of observations, we fix 
 <p align="center"><img src = 'https://github.com/geoios/DRD-Algorithm/blob/main_ywl/Fixed%20nuisance%20%20parameter_UnequalWeight.jpg' width="700"></b>
 
 <b><p align="center" fontsize="15">(b) unequal-weight case</p></b>
-
-
-
-
-
