@@ -115,7 +115,7 @@ We can develop a very efficient algorithm solving the model with nusiance parame
 
 >> Function: Dimension-reduction algorithm for unequal-weight observations
 
-   This program uses the dimension-reduction algorithm to solve the solution of model 1 with the unequal weight.
+   This program uses the dimension-reduction algorithm to solve the solution of model 1 with the unequal weight
 
 ## Blocking-stacking algorithms
 
