@@ -13,7 +13,7 @@ clc; clear all; close all;
 m      = 3;   % Number of parameter estimates
 ObsNum = 30;  % Number of observations
 
-for q = 1:50  % q is the number of nuisance parameters
+for q = 1:100  % q is the number of nuisance parameters
     
     ks = ones(1,q) * ObsNum * q ;                      % Number of Block observations
 
