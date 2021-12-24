@@ -133,11 +133,11 @@ We can develop a very efficient algorithm solving the model with nusiance parame
   Coming back to the observation model 2, assume that the number of each set of observations  <img src="https://latex.codecogs.com/svg.image?L_j" title="L_j" /> is <img src="https://latex.codecogs.com/svg.image?n_j=1000" title="n_j=1000" />, and the number q of nuisance parameters gradually increases from 1 to 200 to test the proposed algorithm performance. To illustrate the running speed of the algorithm, we define the index c=1/t where t is the running time of the algorithm to measure the speed, and then the speed ratio is defined as k=c(dimension-reduction algorithm)/ c(blocking-stacking algorithm) is used to show the improvement of the proposed algorithm on the blocking-stacking algorithm.
 
 
-<p align="center"><img src = 'https://github.com/geoios/DRD-Algorithm/blob/Main_ywl1/Fixed%20observation%20(equal%20weight).jpg' width="700"></b>
+<p align="center"><img src = 'https://github.com/geoios/DRD-Algorithm/blob/Main_ywl1/Figs/Fixed%20observation%20(equal%20weight).jpg' width="700"></b>
 
 <b><p align="center" fontsize="15">(a) equal-weight case</p></b>
 
-<p align="center"><img src = 'https://github.com/geoios/DRD-Algorithm/blob/Main_ywl1/Fixed%20observation%20(unequal%20weight).jpg' width="700"></b>
+<p align="center"><img src = 'https://github.com/geoios/DRD-Algorithm/blob/Main_ywl1/Figs/Fixed%20observation%20(unequal%20weight).jpg' width="700"></b>
 
 <b><p align="center" fontsize="15">(b) unequal-weight case</p></b>
 
@@ -146,11 +146,11 @@ We can develop a very efficient algorithm solving the model with nusiance parame
 
 ### Example code 2 (Fixed the number of nuisance parameters)
 
-<p align="center"><img src = 'https://github.com/geoios/DRD-Algorithm/blob/Main_ywl1/Fixed%20nusaince%20parameter(equal%20weight).jpg' width="700"></b>
+<p align="center"><img src = 'https://github.com/geoios/DRD-Algorithm/blob/Main_ywl1/Figs/Fixed%20nusaince%20parameter(equal%20weight).jpg' width="700"></b>
 
 <b><p align="center" fontsize="15">(a) equal-weight case</p></b>
 
-<p align="center"><img src = 'https://github.com/geoios/DRD-Algorithm/blob/Main_ywl1/Fixed%20nusaince%20parameter(unequal%20weight).jpg' width="700"></b>
+<p align="center"><img src = 'https://github.com/geoios/DRD-Algorithm/blob/Main_ywl1/Figs/Fixed%20nusaince%20parameter(unequal%20weight).jpg' width="700"></b>
 
 <b><p align="center" fontsize="15">(b) unequal-weight case</p></b>
 
