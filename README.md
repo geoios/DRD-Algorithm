@@ -133,27 +133,27 @@ We can develop a very efficient algorithm solving the model with nusiance parame
   Coming back to the observation model 2, assume that the number of each set of observations  <img src="https://latex.codecogs.com/svg.image?L_j" title="L_j" /> is <img src="https://latex.codecogs.com/svg.image?n_j=1000" title="n_j=1000" />, and the number q of nuisance parameters gradually increases from 1 to 200 to test the proposed algorithm performance. To illustrate the running speed of the algorithm, we define the index c=1/t where t is the running time of the algorithm to measure the speed, and then the speed ratio is defined as k=c(dimension-reduction algorithm)/ c(blocking-stacking algorithm) is used to show the improvement of the proposed algorithm on the blocking-stacking algorithm.
 
 
-<p align="center"><img src = 'https://github.com/geoios/DRD-Algorithm/blob/Main_ywl1/Fixed%20observation%20(equal%20weight).jpg' width="700"></b>
+<p align="center"><img src = 'https://github.com/geoios/DRD-Algorithm/blob/Main_ywl1/Figs/Fixed%20observation%20(equal%20weight).jpg' width="700"></b>
 
 <b><p align="center" fontsize="15">(a) equal-weight case</p></b>
 
-<p align="center"><img src = 'https://github.com/geoios/DRD-Algorithm/blob/Main_ywl1/Fixed%20observation%20(unequal%20weight).jpg' width="700"></b>
+<p align="center"><img src = 'https://github.com/geoios/DRD-Algorithm/blob/Main_ywl1/Figs/Fixed%20observation%20(unequal%20weight).jpg' width="700"></b>
 
 <b><p align="center" fontsize="15">(b) unequal-weight case</p></b>
 
 <b><p align="center" fontsize="20">Fig.1 Running time increasing with nuisance parameters</p></b>
-  In the equal-weight case, Fig.1(a) shows that the running time of the blocking-stacking algorithm increases linearly with the number q of nuisance parameters, while that of the dimension-reduction algorithm increases very slowly and takes far less than 0.1 second . The speed ratios show that the improvement of the proposed algorithm on the blocking-stacking algorithm is very effective, e.g., the former is more than 100 times faster than the latter for the nuisances exceeding 30. In the unequal-weight case, as shown in Fig.5 (b), we can draw the same conclusion that the proposed algorithm is still more efficient and takes at most 0.1 seconds. Although the speed ratios become relatively smaller, it still increases linearly with the number of nuisance parameters, i.e., the proposed dimension-reduction algorithm performance is still outstanding.
+  In the equal-weight case, Fig.1(a) shows that the running time of the blocking-stacking algorithm increases linearly with the number q of nuisance parameters, while that of the dimension-reduction algorithm increases very slowly and takes far less than 0.1 second . The speed ratios show that the improvement of the proposed algorithm on the blocking-stacking algorithm is very effective, e.g., the former is more than 100 times faster than the latter for the nuisances exceeding 30. In the unequal-weight case, as shown in Fig.1 (b), we can draw the same conclusion that the proposed algorithm is still more efficient and takes at most 0.1 seconds. Although the speed ratios become relatively smaller, it still increases linearly with the number of nuisance parameters, i.e., the proposed dimension-reduction algorithm performance is still outstanding.
 
 ### Example code 2 (Fixed the number of nuisance parameters)
 
-<p align="center"><img src = 'https://github.com/geoios/DRD-Algorithm/blob/Main_ywl1/Fixed%20nusaince%20parameter(equal%20weight).jpg' width="700"></b>
+<p align="center"><img src = 'https://github.com/geoios/DRD-Algorithm/blob/Main_ywl1/Figs/Fixed%20nusaince%20parameter(equal%20weight).jpg' width="700"></b>
 
 <b><p align="center" fontsize="15">(a) equal-weight case</p></b>
 
-<p align="center"><img src = 'https://github.com/geoios/DRD-Algorithm/blob/Main_ywl1/Fixed%20nusaince%20parameter(unequal%20weight).jpg' width="700"></b>
+<p align="center"><img src = 'https://github.com/geoios/DRD-Algorithm/blob/Main_ywl1/Figs/Fixed%20nusaince%20parameter(unequal%20weight).jpg' width="700"></b>
 
 <b><p align="center" fontsize="15">(b) unequal-weight case</p></b>
 
 <b><p align="center" fontsize="20">Fig.2 Running time increasing with observations</p></b>
 
-  To test that the running time increases with the number of observations, we fix the dimension of the nuisance parameter, q=50, and then increase the number of each set of observations from 2 to 2000. As shown in Fig. 6, not only the dimension-reduction algorithm is still efficient, but also the running time of this algorithm is increased with the number of observations only linearly. This is a very good characteristic for the algorithm design to process a huge number of modern geodetic positioning observations. 
+  To test that the running time increases with the number of observations, we fix the dimension of the nuisance parameter, q=50, and then increase the number of each set of observations from 2 to 2000. As shown in Fig. 2, not only the dimension-reduction algorithm is still efficient, but also the running time of this algorithm is increased with the number of observations only linearly. This is a very good characteristic for the algorithm design to process a huge number of modern geodetic positioning observations. 
