@@ -45,7 +45,7 @@ U = zeros(m,1);           % Ui = A' * P * L
 BlockNum = length(Ls);   
 C = [];
 
-%% apply the block-wise sequential least squares
+%% apply the block-wise sequential least squares to slove the undifferenced solution
 for i = 1:BlockNum
     Ai = As{i};
     ni = size(Ai,1);
