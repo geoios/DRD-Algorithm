@@ -42,7 +42,7 @@ U = zeros(m,1);
 BlockNum = length(Ls);
 C = [];
 
-%% apply the block-wise sequential least squares
+%% for applying the block-wise sequential least squares to slove the undifferenced solution
 for i = 1:BlockNum
     N  = N + As{i}'* As{i};
     U  = U + As{i}'* Ls{i};
