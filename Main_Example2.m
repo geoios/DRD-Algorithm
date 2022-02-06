@@ -14,7 +14,7 @@ m      = 3;    % Number of main parameters
 q      = 50;   % Number of nuisance parameters 
 Loop   = 0;    % Recording the iteration times
 
-for ObsNum = 100:1000  % q is the number of each set of observations
+for ObsNum = 2:2000  % q is the number of each set of observations
     
     Loop = Loop + 1; 
     ks   = ones(1,q) * ObsNum;                    % Numbers of block observations
@@ -62,10 +62,22 @@ for ObsNum = 100:1000  % q is the number of each set of observations
     RunTime_Case2(Loop,:) = [RunTime_Dim2   ,  RunTime_Blo2];
 end
 
-% Drawing results (Equal-weight case)
-FigOutput(RunTime_Case1(:,1) ,RunTime_Case1(:,2))
-title({'Running time increasing with the number of observations(Euqal-weight)'});
+RunRatio_Equal = RunTime_Case1(:,2)./RunTime_Case1(:,1);
+RunRatio_UnEqual = RunTime_Case2(:,2)./RunTime_Case2(:,1);
 
+% plot(RunRatio_Equal)
+createfigure(RunTime_Case1, RunRatio_Equal)
+xlabel('Number of observations','FontWeight','bold','FontSize',15.4);
+title({'Running time increasing with the number of observations(Euqal-weight)'});
 % Drawing results( Unequal-weight case)
-FigOutput(RunTime_Case2(:,1) ,RunTime_Case2(:,2))
+createfigure(RunTime_Case2, RunRatio_UnEqual)
+xlabel('Number of observations','FontWeight','bold','FontSize',15.4);
 title({'Running time increasing with the number of observations(Uneuqal-weight)'});
+
+
+
+
+
+
+
+

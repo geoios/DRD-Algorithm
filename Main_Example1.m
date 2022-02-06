@@ -13,7 +13,7 @@ clc; clear all; close all;
 m      = 3;   % Number of parameter estimates
 ObsNum = 1000;  % Number of observations
 
-for q = 1:50  % q is the number of nuisance parameters
+for q = 1:200  % q is the number of nuisance parameters
     
     ks = ones(1,q) * ObsNum;                      % Number of Block observations
 
@@ -45,7 +45,7 @@ for q = 1:50  % q is the number of nuisance parameters
     RunTime_Case1(q,:) = [RunTime_Dim1   ,  RunTime_Blo1];
     
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    % +++++++++++ performance test for equal-weight case +++++++++++  %
+    % +++++++++++ performance test for unequal-weight case +++++++++++%
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     % Dimension-reduction algorithm                   
     StartTime_Dim2 = tic;                           % Record running time
@@ -60,12 +60,32 @@ for q = 1:50  % q is the number of nuisance parameters
     % Saving runningTime
     RunTime_Case2(q,:) = [RunTime_Dim2   ,  RunTime_Blo2];
 end
+RunRatio_Equal = RunTime_Case1(:,2)./RunTime_Case1(:,1);
+RunRatio_UnEqual = RunTime_Case2(:,2)./RunTime_Case2(:,1);
+
+
 
 % Drawing results (Equal-weight case)
-FigOutput(RunTime_Case1(:,1), RunTime_Case1(:,2))
+createfigure(RunTime_Case1, RunRatio_Equal)
+xlabel('Number of nusaince parameters','FontWeight','bold','FontSize',15.4);
 title({'Running time increasing with the number of nuisance parameters(Euqal-weight)'});
 
 % Drawing results( Unequal-weight case)
-FigOutput(RunTime_Case2(:,1) ,RunTime_Case2(:,2))
+createfigure(RunTime_Case2, RunRatio_UnEqual)
+xlabel('Number of nusaince parameters','FontWeight','bold','FontSize',15.4);
 title({'Running time increasing with the number of nuisance parameters(Uneuqal-weight)'});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
