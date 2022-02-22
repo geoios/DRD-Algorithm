@@ -14,17 +14,20 @@ N = A'* A;
 U = A' * L;
 E = [N U];
 %% exchange the two rows
-if idx ~= 1
-    E1        = E(idx,:);
-    E(idx,:)  = [];
-    E1(2:m,:) = E;
-end
-e1  = E1(1,:);
+% if idx ~= 1
+%     E1        = E(idx,:);
+%     E(idx,:)  = [];
+%     E1(2:m,:) = E;
+% end
+e1  = E(idx,:);
 e11 = e1(1);
-for i=2:m
-    ei1 = E1(i,1);
-    if ei1 ~= 0
+s = 1;
+for i = 1:m
+    ei1 = E(i,1);
+    if ei1 ~= 0 && i ~= idx
        k = e11/ei1;
-       E1(i,:) = E1(i,:) * k - e1;
+       E1(s,:) = E(i,:) * k - e1;
+       s = s + 1;
     end
+end
 end

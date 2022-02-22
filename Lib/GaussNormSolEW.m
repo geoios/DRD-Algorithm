@@ -34,8 +34,8 @@ for i = 1:BlockNum
     Ai = [As{i} ones(n,1)];
     Li = Ls{i};
     E1 = NormEqGauss(Ai,Li,m);
-    Ni = E1(2:end,2:end-1);
-    Ui = E1(2:end,end);
+    Ni = E1(1:end,2:end-1);
+    Ui = E1(1:end,end);
     N  = N + Ni;
     U  = U + Ui;
 end
