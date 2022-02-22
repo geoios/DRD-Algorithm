@@ -14,7 +14,7 @@ m      = 3;    % Number of main parameters
 q      = 50;   % Number of nuisance parameters 
 Loop   = 0;    % Recording the iteration times
 
-for ObsNum = 2:350  % q is the number of each set of observations
+for ObsNum = 2:50  % q is the number of each set of observations
     
     Loop = Loop + 1; 
     ks   = ones(1,q) * ObsNum;                    % Numbers of block observations
