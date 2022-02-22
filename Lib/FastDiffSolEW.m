@@ -56,8 +56,11 @@ S = - C * Qx * C';
 Y = [];
 for i = 1:BlockNum
     S(i,i) = S(i,i) + length(Ls{i});
-    Vi  = Ls{i} - As{i} * x0;
-    Y = [Y;sum(Vi)];
+    %for j=1:10^7
+    %Vi  = sum(Ls{i} - As{i} * x0);
+    Vi = sum(Ls{i}) - C(i,:) * x0;
+    %end
+    Y = [Y;Vi];
 end
 
 K  = Qx * C'* inv(S);

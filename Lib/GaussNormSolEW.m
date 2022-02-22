@@ -33,11 +33,14 @@ U = zeros(m,1);
 for i = 1:BlockNum
     Ai = [As{i} ones(n,1)];
     Li = Ls{i};
-    E1 = NormEqGauss(Ai,Li,m);
-    Ni = E1(1:end,2:end-1);
-    Ui = E1(1:end,end);
+    idx = m + 1; % the eliminated parameter 
+    [Ni Ui] = NormEqGauss(Ai,Li,idx);
+%     Ni = E1(1:end,2:end-1);
+%     Ui = E1(1:end,end);
     N  = N + Ni;
-    U  = U + Ui;
+    U  = U + Ui';
+    
 end
+svd(N)
 Qx = inv(N);
 x  = Qx * U;     % Undifferenced solution

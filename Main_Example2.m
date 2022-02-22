@@ -14,7 +14,7 @@ m      = 3;    % Number of main parameters
 q      = 50;   % Number of nuisance parameters 
 Loop   = 0;    % Recording the iteration times
 
-for ObsNum = 2:450  % q is the number of each set of observations
+for ObsNum = 3:50  % q is the number of each set of observations
     
     Loop = Loop + 1; 
     ks   = ones(1,q) * ObsNum;                    % Numbers of block observations
@@ -35,21 +35,21 @@ for ObsNum = 2:450  % q is the number of each set of observations
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     % Dimension-reduction algorithm
     StartTime_Dim1 = tic;                         % Record running time(Dimension-reduction algorithm)
-    xd             = FastDiffSolEW(As,Ls);        % Equal-weight
+    xdp1             = FastDiffSolEW(As,Ls) ;       % Equal-weight
     RunTime_Dim1   = toc(StartTime_Dim1);
     
     % Blocking-stacking algorithm
     StartTime_Blo1 = tic;                         % Record running time(Blocking-stacking algorithm)
-    xdp            = UnDiffSolEW(As,Ls);          % Equal-weight
+    xdp2            = UnDiffSolEW(As,Ls) ;         % Equal-weight
     RunTime_Blo1   = toc(StartTime_Blo1);
     
     % Gauss elimination
     StartTime_GE1 = tic;                         % Record running time(Blocking-stacking algorithm)
-    xdp           = GaussNormSolEW(As,Ls);          % Equal-weight
+    xdp3           = GaussNormSolEW(As,Ls);       % Equal-weight
     RunTime_GE1   = toc(StartTime_GE1);
     
     % RunningTime = [Dimension-reduction , Blocking-stacking]
-    RunTime_Case1(Loop,:) = [RunTime_Dim1   RunTime_GE1];%,  RunTime_Blo1, 
+    RunTime_Case1(Loop,:) = [RunTime_Dim1   RunTime_Blo1];%,  RunTime_Blo1, 
     
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     % +++++++++++ performance test for unequal-weight case +++++++++++%
