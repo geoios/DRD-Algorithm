@@ -12,7 +12,7 @@
 
 %}
 
-function x = GaussNormSolEW(As,Ls)
+function x = GaussNormSolUEW(As,Ls,Ps)
 
 %{
 Inputs
@@ -33,8 +33,9 @@ U = zeros(m,1);
 for i = 1:BlockNum
     Ai = [As{i} ones(n,1)];
     Li = Ls{i};
+    Pi = Ps{i};
     idx = m + 1; % the eliminated parameter 
-    [Ni Ui] = NormEqGauss(Ai,Li,idx);
+    [Ni Ui] = NormEqGauss_UEW(Ai,Li,Pi,idx);
     N  = N + Ni;
     U  = U + Ui';
 end
