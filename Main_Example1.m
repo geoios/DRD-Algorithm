@@ -9,14 +9,10 @@
 %}
 
 clc; clear all; close all;
-
 m      = 3;   % Number of parameter estimates
 ObsNum = 1000;  % Number of observations
-
 for q = 1:200  % q is the number of nuisance parameters
-    
     ks = ones(1,q) * ObsNum;                      % Number of Block observations
-
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     %        +++++++++++ test data simulation  +++++++++++            %
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -27,7 +23,6 @@ for q = 1:200  % q is the number of nuisance parameters
         Ls{i} = As{i} * x + b + randn(ks(i),1) * 1;     % productiong Observations
         ps{i} = ones(ks(i),1);                          % productiong weighted
     end
-    
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     % +++++++++++ performance test for equal-weight case +++++++++++  %
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -35,15 +30,12 @@ for q = 1:200  % q is the number of nuisance parameters
     StartTime_Dim1 = tic;                         % Record running time(Dimension-reduction algorithm)
     xd             = FastDiffSolEW(As,Ls);        % Equal-weight
     RunTime_Dim1   = toc(StartTime_Dim1);
-    
     % Blocking-stacking algorithm
     StartTime_Blo1 = tic;                         % Record running time(Blocking-stacking algorithm)
     xdp            = UnDiffSolEW(As,Ls);          % Equal-weight
     RunTime_Blo1   = toc(StartTime_Blo1);
-    
     % Saving runningTime
     RunTime_Case1(q,:) = [RunTime_Dim1   ,  RunTime_Blo1];
-    
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     % +++++++++++ performance test for unequal-weight case +++++++++++%
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -51,25 +43,22 @@ for q = 1:200  % q is the number of nuisance parameters
     StartTime_Dim2 = tic;                           % Record running time
     xd             = FastDiffSolUEW(As,Ls,ps);      % Unequal-weight
     RunTime_Dim2   = toc(StartTime_Dim2);
-    
     % Blocking-stacking algorithm                
     StartTime_Blo2 = tic;                           % Record running time
     x2             = UnDiffSolUEW(As,Ls,ps);        % Unequal-weight          
     RunTime_Blo2   = toc(StartTime_Blo2);
-    
     % Saving runningTime
     RunTime_Case2(q,:) = [RunTime_Dim2   ,  RunTime_Blo2];
 end
+
+
+
 RunRatio_Equal = RunTime_Case1(:,2)./RunTime_Case1(:,1);
 RunRatio_UnEqual = RunTime_Case2(:,2)./RunTime_Case2(:,1);
-
-
-
 % Drawing results (Equal-weight case)
 createfigure(RunTime_Case1, RunRatio_Equal)
 xlabel('Number of nusaince parameters','FontWeight','bold','FontSize',15.4);
 title({'Running time increasing with the number of nuisance parameters(Euqal-weight)'});
-
 % Drawing results( Unequal-weight case)
 createfigure(RunTime_Case2, RunRatio_UnEqual)
 xlabel('Number of nusaince parameters','FontWeight','bold','FontSize',15.4);
