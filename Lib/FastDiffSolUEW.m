@@ -51,10 +51,14 @@ for i = 1:BlockNum
     ni = size(Ai,1);
     pi = Ps{i};
     Li = Ls{i};
-    for j=1:ni
-       N  = N + Ai(j,:)'* Ai(j,:) * pi(j);
-       U  = U + Ai(j,:)'* Li(j,:) * pi(j);
-    end
+%     for j=1:ni
+%        N  = N + Ai(j,:)'* Ai(j,:) * pi(j);
+%        U  = U + Ai(j,:)'* Li(j,:) * pi(j);
+%     end
+    Ni = Ai'.*pi'*Ai;
+    Ui = Ai'.*pi'*Li;
+    N = N + Ni;
+    U = U + Ui;
     C  = [C;sum(Ai.*pi)];
 end
 
