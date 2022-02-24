@@ -74,8 +74,8 @@ end
 
 % RunRatio_Equal = RunTime_Case1(:,2)./RunTime_Case1(:,1);
 % RunRatio_UnEqual = RunTime_Case2(:,2)./RunTime_Case2(:,1);
-RunRatio_Equal = RunTime_Case1(:,1)./RunTime_Case1(:,2);
-RunRatio_UnEqual = RunTime_Case2(:,1)./RunTime_Case2(:,2);
+RunRatio_Equal = RunTime_Case1(:,2)./RunTime_Case1(:,1);
+RunRatio_UnEqual = RunTime_Case2(:,2)./RunTime_Case2(:,1);
 
 % plot(RunRatio_Equal)
 createfigure(RunTime_Case1, RunRatio_Equal)

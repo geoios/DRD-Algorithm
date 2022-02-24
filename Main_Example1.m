@@ -65,15 +65,15 @@ end
 % RunRatio_UnEqual = RunTime_Case2(:,2)./RunTime_Case2(:,1);
 
 
-RunRatio_Equal = RunTime_Case1(:,1)./RunTime_Case1(:,2);
-RunRatio_UnEqual = RunTime_Case2(:,1)./RunTime_Case2(:,2);
+RunRatio_Equal = RunTime_Case1(:,2)./RunTime_Case1(:,1);
+RunRatio_UnEqual = RunTime_Case2(:,2)./RunTime_Case2(:,1);
 
 
 % Drawing results (Equal-weight case)
 createfigure(RunTime_Case1, RunRatio_Equal)
 xlabel('Number of nusaince parameters','FontWeight','bold','FontSize',15.4);
 title({'Running time increasing with the number of nuisance parameters(Euqal-weight)'});
-% Drawing results( Unequal-weight case)
+% Drawing results (Unequal-weight case)
 createfigure(RunTime_Case2, RunRatio_UnEqual)
 xlabel('Number of nusaince parameters','FontWeight','bold','FontSize',15.4);
 title({'Running time increasing with the number of nuisance parameters(Uneuqal-weight)'});
