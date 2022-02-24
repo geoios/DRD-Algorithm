@@ -49,8 +49,8 @@ for ObsNum = 3:2000  % q is the number of each set of observations
     RunTime_GE1   = toc(StartTime_GE1);
     
     % RunningTime = [Dimension-reduction , Blocking-stacking]
-    RunTime_Case1(Loop,:) = [RunTime_Dim1  RunTime_Blo1  RunTime_GE1]; 
-    
+%     RunTime_Case1(Loop,:) = [RunTime_Dim1  RunTime_Blo1  RunTime_GE1];
+    RunTime_Case1(Loop,:) = [RunTime_Dim1  RunTime_GE1];
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     % +++++++++++ performance test for unequal-weight case +++++++++++%
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -68,11 +68,14 @@ for ObsNum = 3:2000  % q is the number of each set of observations
     StartTime_GE2 = tic;                         % Record running time(Blocking-stacking algorithm)
     xdp3          = GaussNormSolUEW(As,Ls,ps);       % Equal-weight
     RunTime_GE2   = toc(StartTime_GE2);
-    RunTime_Case2(Loop,:) = [RunTime_Dim2  RunTime_Blo2  RunTime_GE2]; 
+%     RunTime_Case2(Loop,:) = [RunTime_Dim2  RunTime_Blo2  RunTime_GE2]; 
+    RunTime_Case2(Loop,:) = [RunTime_Dim2  RunTime_GE2]; 
 end
 
-RunRatio_Equal = RunTime_Case1(:,2)./RunTime_Case1(:,1);
-RunRatio_UnEqual = RunTime_Case2(:,2)./RunTime_Case2(:,1);
+% RunRatio_Equal = RunTime_Case1(:,2)./RunTime_Case1(:,1);
+% RunRatio_UnEqual = RunTime_Case2(:,2)./RunTime_Case2(:,1);
+RunRatio_Equal = RunTime_Case1(:,1)./RunTime_Case1(:,2);
+RunRatio_UnEqual = RunTime_Case2(:,1)./RunTime_Case2(:,2);
 
 % plot(RunRatio_Equal)
 createfigure(RunTime_Case1, RunRatio_Equal)
