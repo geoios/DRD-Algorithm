@@ -38,9 +38,9 @@ for q = 2:200  % q is the number of nuisance parameters
     xdp3          = GaussNormSolEW(As,Ls);       % Equal-weight
     RunTime_GE1   = toc(StartTime_GE1);
     % Saving runningTime
-%     RunTime_Case1(q,:) = [RunTime_Dim1,RunTime_Blo1,RunTime_GE1];
+    RunTime_Case1(q,:) = [RunTime_Dim1,RunTime_Blo1,RunTime_GE1];
     
-    RunTime_Case1(q,:) = [RunTime_Dim1,RunTime_GE1];
+%     RunTime_Case1(q,:) = [RunTime_Dim1,RunTime_GE1];
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     % +++++++++++ performance test for unequal-weight case +++++++++++%
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -57,12 +57,9 @@ for q = 2:200  % q is the number of nuisance parameters
     xdp3          = GaussNormSolUEW(As,Ls,ps);       % Equal-weight
     RunTime_GE2   = toc(StartTime_GE2);
     % Saving runningTime
-%     RunTime_Case2(q,:) = [RunTime_Dim2,RunTime_Blo2,RunTime_GE2];
-    RunTime_Case2(q,:) = [RunTime_Dim2,RunTime_GE2];
+    RunTime_Case2(q,:) = [RunTime_Dim2,RunTime_Blo2,RunTime_GE2];
+%     RunTime_Case2(q,:) = [RunTime_Dim2,RunTime_GE2];
 end
-
-% RunRatio_Equal = RunTime_Case1(:,2)./RunTime_Case1(:,1);
-% RunRatio_UnEqual = RunTime_Case2(:,2)./RunTime_Case2(:,1);
 
 
 RunRatio_Equal = RunTime_Case1(:,2)./RunTime_Case1(:,1);
