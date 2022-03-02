@@ -14,7 +14,7 @@ m      = 3;    % Number of main parameters
 q      = 50;   % Number of nuisance parameters 
 Loop   = 0;    % Recording the iteration times
 
-for ObsNum = 3:350  % q is the number of each set of observations
+for ObsNum = 3:2000  % q is the number of each set of observations
     
     Loop = Loop + 1; 
     ks   = ones(1,q) * ObsNum;                    % Numbers of block observations
@@ -49,8 +49,8 @@ for ObsNum = 3:350  % q is the number of each set of observations
     RunTime_GE1   = toc(StartTime_GE1);
     
     % RunningTime = [Dimension-reduction , Blocking-stacking]
-    RunTime_Case1(Loop,:) = [RunTime_Dim1   RunTime_GE1];%,  RunTime_Blo1, 
-    
+%     RunTime_Case1(Loop,:) = [RunTime_Dim1  RunTime_Blo1  RunTime_GE1];
+    RunTime_Case1(Loop,:) = [RunTime_Dim1  RunTime_GE1];
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     % +++++++++++ performance test for unequal-weight case +++++++++++%
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -65,12 +65,15 @@ for ObsNum = 3:350  % q is the number of each set of observations
     RunTime_Blo2   = toc(StartTime_Blo2);
     
     % Gauss elimination
-    StartTime_GE1 = tic;                         % Record running time(Blocking-stacking algorithm)
+    StartTime_GE2 = tic;                         % Record running time(Blocking-stacking algorithm)
     xdp3          = GaussNormSolUEW(As,Ls,ps);       % Equal-weight
-    RunTime_GE1   = toc(StartTime_GE1);
-    RunTime_Case2(Loop,:) = [RunTime_Dim2   ,  RunTime_Blo2];
+    RunTime_GE2   = toc(StartTime_GE2);
+%     RunTime_Case2(Loop,:) = [RunTime_Dim2  RunTime_Blo2  RunTime_GE2]; 
+    RunTime_Case2(Loop,:) = [RunTime_Dim2  RunTime_GE2]; 
 end
 
+% RunRatio_Equal = RunTime_Case1(:,2)./RunTime_Case1(:,1);
+% RunRatio_UnEqual = RunTime_Case2(:,2)./RunTime_Case2(:,1);
 RunRatio_Equal = RunTime_Case1(:,2)./RunTime_Case1(:,1);
 RunRatio_UnEqual = RunTime_Case2(:,2)./RunTime_Case2(:,1);
 
@@ -82,11 +85,6 @@ title({'Running time increasing with the number of observations(Euqal-weight)'})
 createfigure(RunTime_Case2, RunRatio_UnEqual)
 xlabel('Number of observations','FontWeight','bold','FontSize',15.4);
 title({'Running time increasing with the number of observations(Uneuqal-weight)'});
-
-
-
-
-
 
 
 

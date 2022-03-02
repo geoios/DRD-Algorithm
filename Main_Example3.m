@@ -67,7 +67,6 @@ for ObsNum = 50:50  % is the number of each set of observations
     StartTime_Blo2 = tic;                           % Record running time
     xu             = UnDiffSolUEW(As,Ls,ps);                 
     RunTime_Blo2   = toc(StartTime_Blo2);
-    
     RunTime_Case2(Loop,:) = [RunTime_Dim2   ,  RunTime_Blo2];
 end
 
