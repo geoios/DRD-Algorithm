@@ -34,18 +34,12 @@ where s1 the WSSR of the basic model, and s2 is the WSSR of the augmented model 
 
 ## Partial Gauss elimination
 
+   Partial Gauss elimination can be applied to eliminate the nusaince paramters to obtain the concerned parameters. In the augmented model L = Ax + Zy + e, assume that y is the nusaince paramter, and then we can obtain the following normal equation
    
+![Normal equation](https://latex.codecogs.com/svg.image?\begin{pmatrix}N_x_x&N_x_y\\\\N_y_x&N_y_y\\\\\end{pmatrix}=\begin{pmatrix}U_x\\\\U_y\end{pmatrix})
 
+Applying one step Gauss elimination on the above equation, we have
 
-The least squares (LS) estimation of the main parameter x reads:
+![Normal equation](https://latex.codecogs.com/svg.image?\begin{pmatrix}N_x_x^{'}&0\\\\N_x_y&N_y_y\\\\\end{pmatrix}=\begin{pmatrix}U_x^{'}\\\\U_y\end{pmatrix})
 
-  ![LS solution of main parameter](https://latex.codecogs.com/svg.image?\hat{X}_o=({A^TP_{e_L}A})^{-1}A^TP_{e_L}L)
-
-where P is the weight matrix of the observations.
-
-  ![LS solution of main parameter](https://latex.codecogs.com/svg.image?Q_{\hat{X}_o}=(A^TP_{e_L}A)^{-1})
-
-is the co-factor matrix of the main parameters.
-
-# Observational model augmented with one nuisance parameter
-
+then solving the euqaiton N'x=U' will result in the main parameter estimation. This is also called as one-by-one elimination.
