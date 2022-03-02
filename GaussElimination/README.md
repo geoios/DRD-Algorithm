@@ -1,4 +1,4 @@
-# Gauss elimination: is an efficient alogrithm solving both the sum of weighted squared residuals and the parameters 
+# Gauss elimination: is an efficient alogrithm solving both the weighted sum of squared residuals (WSSR) and the parameters 
 
 ## Normal equation and Gauss elimination
 For the linear observation model L = Ax + e, the least-squares (LS) solution can be sloved by the following normal equation
@@ -23,7 +23,17 @@ where ![Normal equation](https://latex.codecogs.com/svg.image?S=L^TL) and Li is 
 
 ## Recusive Gauss elimination
 In the context of the model selection, the recusive formula for s might be useful to avoid the caculation. For the basic model L = Ax + e, Assume that it is augmented by the model Zy, and then we can obtain the augmented model L = Ax + Zy + e. A problem arising is that, does the appending parameter y improve the fitting effectively? One way to solve this problem is the AIC or BIC criterion as
+
+  BIC = n*ln(s/n) + ln(n)*m + n(1+ln(𝝿))
   
+where n is the observation number and m is the parameter number. Only if the BIC decreases the parameter y is considered to be effective to improve the model; otherwise, it should be refused and then to solve the basic model to obtain the x. Obviously, the Gauss elimination gives an appoach to efficiently obtain the s without figuring out x. Besides this, in the context of Gauss elimination we can establish a recusive formula for the s, and it reads:
+
+   s2 = s1 - k * y
+
+where s1 the WSSR of the basic model, and s2 is the WSSR of the augmented model L = Ax + Zy + e, k can be otained in the Gauss elimination. The recusive formula for x can be given in the context of Gauss elimination.
+
+## Partial Gauss elimination
+
    
 
 
