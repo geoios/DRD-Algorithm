@@ -29,7 +29,7 @@ for ObsNum = 3:350  % q is the number of each set of observations
         As{i} = rand(ks(i),m);                            % productiong design martix
         zs{i} = rand(ks(i),1);                            % non-constant nusaince parameter's design matrix
         k = 0; %% vanish the random error to check the correctness of the algorithm
-        Ls{i} = As{i} * x + zs{i} + randn(ks(i),1) * k; % productiong Observations
+        Ls{i} = As{i} * x + zs{i};% + randn(ks(i),1) * k; % productiong Observations
         ps{i} = rand(ks(i),1);                            % productiong weighted
     end
     

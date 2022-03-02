@@ -7,24 +7,7 @@
 %       ;  . .  ... 0
 %      An  0 0  ... Zn] 
 % Where Zi = [zi1,zi2,...,zin]',ki is the observation number of the ith sub equation
-
-%The non-agumented observation model:
-L = Bx + v
-where
-A = [A1
-     A2
-     .
-     .
-     An] 
-
-%% differenced and undifferenced solution conservsion formulea used are as follows
-    xd = xu - dx
-    dx = Q * am' * (wm - am*Q*am')^-1 * vm
-    Q = (B'*P*B)^-1
-    vm = wsum(P), where P is the weight vector
-    am = wsum(B)
-    vm = wsum(v), where v = L - B * xu is the least squares
-    n is the number of observations
+% Note that Zi might be not equal to [1,1,...,1]'.
 %}
 
 function xd = FastDiffSolUEW_General(As,Ls,Ps,Zs)
