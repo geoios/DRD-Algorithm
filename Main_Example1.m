@@ -75,17 +75,3 @@ createfigure(RunTime_Case2, RunRatio_UnEqual)
 xlabel('Number of nusaince parameters','FontWeight','bold','FontSize',15.4);
 title({'Running time increasing with the number of nuisance parameters(Uneuqal-weight)'});
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
