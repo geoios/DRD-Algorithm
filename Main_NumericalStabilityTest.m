@@ -1,11 +1,5 @@
-%{
-        This is an example to show how to use the dimension-reduction algorithm function.
-        At the same time, the computational efficiency of blocking-stacking algorithm  and
-        dimension-reduction algorithm are compared.
-
-        At first, assume that the number q of nuisance parameters is fixed to be  q = 20, and the number 
-        of each set of observations gradually increase from 20 to 200 to test the proposed 
-        algorithm performance.
+%{ 
+To Test the numercial stablility of the alogrithm
 %}
 
 clc; clear all; 
@@ -48,9 +42,3 @@ for ObsNum = 3:3:30  % q is the number of each set of observations
     zs(k,1:3) = [xdp1(3) xdp2(3) xdp3(3)];
     k  =  k + 1;
 end
-
-
-% plot(RunRatio_Equal)
-createfigure(xs(:,2)-xs(:,1), xs(:,3)-xs(:,1))
-xlabel('Number of observations','FontWeight','bold','FontSize',15.4);
-title({'Running time increasing with the number of observations(Euqal-weight)'});

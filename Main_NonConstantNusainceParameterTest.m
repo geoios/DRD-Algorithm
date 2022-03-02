@@ -1,11 +1,5 @@
 %{
-        This is an example to show how to use the dimension-reduction algorithm function.
-        At the same time, the computational efficiency of blocking-stacking algorithm  and
-        dimension-reduction algorithm are compared.
-
-        At first, assume that the number q of nuisance parameters is fixed to be  q = 20, and the number 
-        of each set of observations gradually increase from 20 to 200 to test the proposed 
-        algorithm performance.
+To test the nonconstant nusaince paramemter elimination
 %}
 
 clc; clear all; 
@@ -42,4 +36,3 @@ for ObsNum = 3:350  % q is the number of each set of observations
     xdp2           = FastDiffSolUEW_General(As,Ls,ps,zs);      
     RunTime_Dim2   = toc(StartTime_Dim2);
 end
-
