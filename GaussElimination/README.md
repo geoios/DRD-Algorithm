@@ -1,8 +1,8 @@
-# Basic observational model only with main parameter
+# Gauss elimination: is an efficient alogrithm solving both the sum of weighted squared residuals and the parameters 
 
-## Model 1
+## Normal equation
 
-![model without nusaince parameter](https://latex.codecogs.com/svg.image?L\text{=}AX+e_L)
+![Normal equation](https://latex.codecogs.com/svg.image?\begin{pmatrix}A^TA&A^TL\\L^TA&L^TL\\\end{pmatrix})
 
 where e is the obervational error term. 
 
