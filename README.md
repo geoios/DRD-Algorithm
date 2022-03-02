@@ -6,7 +6,7 @@
 
 where e is the obervational error term. 
 
-## solution 1
+## Solution 1
 The least squares (LS) estimation of the main parameter x reads:
 
 ![LS solution of main parameter](https://latex.codecogs.com/svg.image?\hat{X}_o=({A^TP_{e_L}A})^{-1}A^TP_{e_L}L)
@@ -94,6 +94,7 @@ where ![L](https://latex.codecogs.com/svg.image?a_i_j) is the entry of the matri
 ![LS solution of main parameter](https://latex.codecogs.com/svg.image?\bar{a}=\begin{pmatrix}\sum_{i=1}^{n}p_ia_i_1&\sum_{i=1}^{n}p_ia_i_2&...&\sum_{i=1}^{n}p_ia_i_{(m-1)}\\\\\end{pmatrix})
 
 where pi are the weights of the observations. The conversion formula between the variance estimations can also be established.
+
   The above formula can also be generalized to the case with z = [z1 z2 ... zn]' which indicates the error terms related to the nusaince paramters are not constants.
   
 ![LS solution of main parameter](https://latex.codecogs.com/svg.image?k_1=(\sum_{i=1}^{n}z_i^2p_i-\bar{a}Q_{\hat{X}_o}\bar{a}^T)^{-1})
